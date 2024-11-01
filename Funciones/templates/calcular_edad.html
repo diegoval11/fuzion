@@ -1,0 +1,23 @@
+{% extends 'funciones.html' %}
+
+{% block content %}
+<div id="content">
+    <form method="post" action="{% url 'calcular_edad' %}">
+        {% csrf_token %}
+        <div class="input-container">
+            <label for="name">Ingresa tu nombre</label>
+            <input type="text" id="name" name="name" required class="medium-input">
+        </div>
+        <div class="input-container">
+            <label for="birthdate">Ingresa tu fecha de nacimiento</label>
+            <input type="text" id="birthdate" name="birthdate" required class="medium-input" placeholder="DD/MM/YYYY" oninput="formatDate(this)">
+        </div>
+        <button type="submit">Calcular Edad</button>
+    </form>
+    {% if edad %}
+    <div id="resultado" class="mt-4">
+        <p>{{ name }}, tu edad es {{ edad }} años.</p>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,97 @@
+{% load static %}
+
+<!doctype html>
+<html lang="es">
+<head>
+    <title>Amander</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.3.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <link rel="stylesheet" href="{% static 'css/funciones.css' %}">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="{% static 'images/logo_icon.png' %}" class="logo-img">
+        </div>
+        <div class="container">
+            <form class="d-flex justify-content-end search-container">
+                <input class="form-control form-control-sm me-2 search-div" type="search" placeholder="Buscar Funciones" aria-label="Buscar">
+                <button class="btn btn-outline-secondary search-btn" type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+        <nav class="navbar navbar-custom">
+            <div class="container">
+                <ul class="nav">
+          {% block functions %} {% endblock %}
+                    
+                    <li class="nav-item">
+                        <div class="more-functions-container" onclick="toggleMenu()">+</div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container main-content" id="content">{% block content %}{% endblock %}</div>
+    </main>
+    <footer class="container mx-auto my-2">
+        <div class="row">
+            <div class="col-md-4 footer-text-container">
+                <span class="footer-header">Gracias por tu Visita</span>
+            </div>
+            <div class="col-md-4 footer-text-container">
+                <span class="footer-text">
+                    Página desarrollada por estudiantes de ITCA-FEPADE. Todos los derechos reservados.
+                </span>
+            </div>
+            <div class="col-md-4 footer-text-container">
+                <ul class="contact-us-list">
+                    <li><i class="fa-brands fa-github"></i></li>
+                    <li><i class="fa-brands fa-youtube"></i></li>
+                    <li><i class="fa-brands fa-facebook"></i></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="blur-background" id="expandedMenu">   </div>
+
+        <div class="blur-background2"></div>
+
+            <!-- Repite los mismos ítems del menú principal aquí -->
+            <div class="expanded-menu">
+                <div class="mt-5 search-expanded">
+                    <form class="d-flex justify-content-start search-container">
+                        <input class="form-control form-control-sm me-2 search-div" type="search" placeholder="Buscar Funciones" aria-label="Buscar" style="z-index: 9999999;">
+                        <button class="btn btn-outline-secondary search-btn" type="submit" style="z-index: 9999999;"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+
+                {% block all_functions %} 
+
+               
+         
+
+        {% endblock %}
+ 
+
+ 
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+    <!-- Custom JavaScript -->
+    
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

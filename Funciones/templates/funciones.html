@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block functions %}
+
+<!-- Estas son las funciones que aparecen en el NAVBAR o Barra de Navegacion Principal -->
+<li class="nav-item">
+    <a href="{% url 'calculadora' %}" class="nav-item-container">
+        <img src="{% static 'images/1.png' %}" class="nav-item-img">
+        <span class="nav-item-text">Calculadora</span>
+    </a>
+</li>
+<li class="nav-item">
+    <a href="{% url 'calcular_areas' %}" class="nav-item-container">
+        <img src="{% static 'images/2.png' %}" class="nav-item-img">
+        <span class="nav-item-text">Calcular Áreas</span>
+    </a>
+</li>
+
+
+<li class="nav-item">
+    <a href="{% url 'calcular_edad' %}" class="nav-item-container">
+        <img src="{% static 'images/edad.png' %}" class="nav-item-img">
+        <span class="nav-item-text">Calcular Edad</span>
+    </a>
+</li>
+<li class="nav-item">
+    <a href="#" class="nav-item-container">
+        <img src="{% static 'images/4.png' %}" class="nav-item-img">
+        <span class="nav-item-text">Ruleta al Azar</span>
+    </a>
+</li>
+<li class="nav-item">
+    <a href="#" class="nav-item-container">
+        <img src="{% static 'images/5.png' %}" class="nav-item-img">
+        <span class="nav-item-text">Parafrasear</span>
+    </a>
+</li>
+
+
+<li class="nav-item">
+    <a href="#" class="nav-item-container">
+        <img src="{% static 'images/6.png' %}" class="nav-item-img">
+        <span class="nav-item-text">Convertir Archivos</span>
+    </a>
+</li>
+
+<li class="nav-item">
+    <a href="#" class="nav-item-container">
+        <img src="{% static 'images/6.png' %}" class="nav-item-img">
+        <span class="nav-item-text">Convertir Archivos</span>
+    </a>
+</li>
+<li class="nav-item">
+    <a href="#" class="nav-item-container">
+        <img src="{% static 'images/6.png' %}" class="nav-item-img">
+        <span class="nav-item-text">Convertir Archivos</span>
+    </a>
+</li>
+<li class="nav-item">
+    <a href="#" class="nav-item-container">
+        <img src="{% static 'images/6.png' %}" class="nav-item-img">
+        <span class="nav-item-text">Convertir Archivos</span>
+    </a>
+</li>
+<li class="nav-item">
+    <a href="#" class="nav-item-container">
+        <img src="{% static 'images/6.png' %}" class="nav-item-img">
+        <span class="nav-item-text">Convertir Archivos</span>
+    </a>
+</li>
+
+{% endblock %}
+
+
+<!-- Estas son las funciones que aparecen en el menu extendido -->
+{% block all_functions %} 
+<a href="{% url 'calculadora' %}" class="nav-item-container second-menu">
+    <img src="{% static 'images/1.png' %}" class="nav-item-img">
+    <span class="nav-item-text">Calculadora</span>
+</a>
+
+
+<a href="{% url 'calcular_areas' %}" class="nav-item-container">
+    <img src="{% static 'images/2.png' %}" class="nav-item-img">
+    <span class="nav-item-text">Calcular Áreas</span>
+</a>
+
+<div class="">
+<a href="#" class="nav-item-container">
+    <img src="{% static 'images/3.png' %}" class="nav-item-img">
+    <span class="nav-item-text">Álgebra</span>
+</a>
+</div>
+<div class="">
+<a href="#" class="nav-item-container">
+    <img src="{% static 'images/4.png' %}" class="nav-item-img">
+    <span class="nav-item-text">Ruleta al Azar</span>
+</a>
+</div>
+<div class="">
+<a href="#" class="nav-item-container">
+    <img src="{% static 'images/5.png' %}" class="nav-item-img">
+    <span class="nav-item-text">Parafrasear</span>
+</a>
+</div>
+<div class="">
+<a href="#" class="nav-item-container">
+    <img src="{% static 'images/6.png' %}" class="nav-item-img">
+    <span class="nav-item-text">Convertir Archivos</span>
+</a>
+</div>
+
+
+<div class="">
+<a href="#" class="nav-item-container">
+    <img src="{% static 'images/6.png' %}" class="nav-item-img">
+    <span class="nav-item-text">Convertir Archivos</span>
+</a>
+</div>
+</div>
+{% endblock %}
